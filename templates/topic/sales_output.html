@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block additional_content_01 %}
+<div class="row" style="margin-bottom: 20px;">
+    <div class="col-md-2">
+        <!-- 引用左側導航部分 -->
+        {% include 'topic/sales_left.html' %}
+    </div>
+    <div class="col-md-10">
+        <h1>以下是LLM產生的銷售文案</h1>
+        <p>{{ response_text }}</p>
+    </div>
+</div>
+{% endblock %}

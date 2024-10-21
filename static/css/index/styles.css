@@ -1,0 +1,10 @@
+.title {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #4a90e2;
+    text-shadow: 2px 2px 4px #aaaaaa;
+    background: linear-gradient(to right, #cccccc 0%, #ffffff 50%, #cccccc 100%);
+    padding: 10px;
+    border-radius: 10px;
+}

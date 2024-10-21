@@ -1,0 +1,29 @@
+<form method="post" action="{% url 'topic:handle_sales_form' %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="productName">產品名稱</label>
+        <input type="text" class="form-control" id="productName" name="productName" required>
+    </div>
+    <div class="form-group">
+        <label for="productFeatures">產品特性或相關數據</label>
+        <textarea class="form-control" id="productFeatures" name="productFeatures" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="style">風格</label>
+        <select class="form-control" id="style" name="style">
+            <option value="Style1">雷軍</option>
+            <option value="Style2">Style 2</option>
+            <option value="Style3">Style 3</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="wordCount">字數 (200~1000字)</label>
+        <input type="number" class="form-control" id="wordCount" name="wordCount" min="200" max="1000" required>
+    </div>
+    <div class="form-group">
+        <label for="otherRequirements">其他要求</label>
+        <textarea class="form-control" id="otherRequirements" name="otherRequirements" rows="3"></textarea>
+    </div>
+    <br> <!-- 增加這行來創造間隔 -->
+    <button type="submit" class="btn btn-primary">提交</button>
+</form>
