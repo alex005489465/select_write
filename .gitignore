@@ -11,6 +11,7 @@ __pycache__/
 # 忽略虛擬環境目錄
 venv/
 env/
+select_write_env/
 
 # 忽略 Django 靜態文件和媒體文件
 staticfiles/
@@ -22,3 +23,9 @@ Thumbs.db
 
 # 確保 text 文件使用 LF 行結束符
 *.py text eol=lf
+
+#忽略本地LLM模型
+ChatLM-mini-Chinese-main
+
+#忽略Azure API
+Azure_API_config.json

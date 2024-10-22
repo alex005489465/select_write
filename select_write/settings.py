@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import json
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -135,3 +136,15 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# BASE_DIR 是項目的根目錄
+CONFIG_PATH = os.path.join(BASE_DIR, 'select_write', 'Azure_API_config.json')
+
+# 從 JSON 文件中讀取配置
+with open(CONFIG_PATH, 'r') as config_file:
+    config = json.load(config_file)
+
+# 設置 Azure OpenAI API 配置
+AZURE_OPENAI_API_KEY = config.get('AZURE_OPENAI_API_KEY', '')
+AZURE_OPENAI_ENDPOINT = config.get('AZURE_OPENAI_ENDPOINT', '')
