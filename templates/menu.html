@@ -55,12 +55,12 @@
     <div class="col-md-2">
         <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-expanded="false">
-                動作
+                個人帳號
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
-                <li><a class="dropdown-item disabled" href="#">動作</a></li>
-                <li><a class="dropdown-item" href="#">另一個動作</a></li>
-                <li><a class="dropdown-item" href="#">這裡有其他的東西</a></li>
+                <li><a class="dropdown-item" href="{% url 'user:register' %}">註冊</a></li>
+                <li><a class="dropdown-item" href="{% url 'user:login' %}">登入</a></li>
+                <li><a class="dropdown-item" href="{% url 'user:logout' %}">登出</a></li>
             </ul>
         </div>
     </div>

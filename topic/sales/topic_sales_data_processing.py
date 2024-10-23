@@ -90,7 +90,7 @@ def get_llm_response(intermediate_document):
         messages=[
             {"role": "user", "content": intermediate_document}
         ],
-        max_tokens=300
+        max_tokens=800
     )
     
     return response.choices[0].message.content

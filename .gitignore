@@ -4,6 +4,7 @@ __pycache__/
 
 # 忽略數據庫文件
 *.sqlite3
+migrations
 
 # 忽略環境設置文件
 .env
